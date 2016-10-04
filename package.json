@@ -1,0 +1,34 @@
+{
+  "name": "hubot-discord-trackers",
+  "version": "0.0.1-alpha",
+  "description": "Script for Hubot to post server count to tracking servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "request": "^2.67.0"
+  },
+  "peerDependencies": {
+    "hubot": ">=2.0",
+    "hubot-discod":">2.0.0"
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliasfalse/hubot-discord-trackers"
+  },
+  "author": [
+    {
+      "name": "Matt Voboril",
+      "email": "matej@voboril.org",
+      "url": "http://morningstar-wf.com"
+    }
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },  
+  "license": "ISC"
+}
