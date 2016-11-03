@@ -26,14 +26,14 @@ module.exports = (robot) ->
   updateDiscordBotsWeb= ->
     if(discordBotsWebToken and discordBotsWebUser)
       robot.logger.debug 'Updating discord bots'
-      robot.logger.debug "#{robot.name} is on #{robot.client.guilds.length} servers"
+      robot.logger.debug "#{robot.name} is on #{robot.client.guilds.size} servers"
       requestBody = 
         method: 'POST'
         url: "https://bots.discord.pw/api/bots/#{discordBotsWebUser}/stats"
         headers:
           Authorization: discordBotsWebToken
         body:
-          server_count: robot.client.guilds.length
+          server_count: robot.client.guilds.size
         json: true
 
       request requestBody, (err, response, body) ->
@@ -48,12 +48,12 @@ module.exports = (robot) ->
   updateCarbonitex= ->
    if(carbonToken)
      robot.logger.debug 'Updating Carbonitex'
-     robot.logger.debug "#{robot.name} is on #{robot.client.guilds.length} servers"
+     robot.logger.debug "#{robot.name} is on #{robot.client.guilds.size} servers"
      requestBody =
         url: 'https://www.carbonitex.net/discord/data/botdata.php'
         body:
           key: carbonToken
-          servercount: robot.client.guilds.length
+          servercount: robot.client.guilds.size
         json: true
 
      request requestBody, (err, response, body) ->
@@ -69,4 +69,4 @@ module.exports = (robot) ->
     updateDiscordBotsWeb()
     return
                 
-  setInterval updateTrackers, 3600000
+  setInterval updateTrackers, 600000
