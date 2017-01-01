@@ -10,8 +10,7 @@
     "request": "^2.67.0"
   },
   "peerDependencies": {
-    "hubot": ">=2.0",
-    "hubot-discord":">2.0.0"
+    "hubot": ">=2.0"
   },
   "devDependencies": {
     "coffee-script": ">=1.2.0"
@@ -24,11 +23,11 @@
     {
       "name": "Matt Voboril",
       "email": "matej@voboril.org",
-      "url": "http://morningstar-wf.com"
+      "url": "http://morningstar.ninja"
     }
   ],
   "engines": {
     "node": ">=6.0.0"
-  },  
+  },
   "license": "ISC"
 }
